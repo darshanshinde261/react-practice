@@ -1,4 +1,8 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
 const Login = () => {
+    const navigate = useNavigate();
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="max-w-sm w-full p-6 bg-slate-50 border h-screen">
@@ -29,7 +33,7 @@ const Login = () => {
           </fieldset>
         </div>
 
-        <button className="w-full mt-6 bg-gray-300 text-gray-600 py-2 rounded-md font-semibold">
+        <button onClick={()=>navigate('/profile')} className="w-full mt-6 bg-gray-300 text-gray-600 py-2 rounded-md font-semibold">
           Login
         </button>
       </div>
